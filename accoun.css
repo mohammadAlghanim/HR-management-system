@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+#display{
+    display: flex;
+    flex-direction: row;
+    
+}
+#menu{
+    display:flex;
+    flex-direction: row;
+    padding-top: 20px;
+    
+}
+#text{
+    list-style-type: none;
+}
+#home{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 225px;
+}
+#About{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding-left: 295px;
+}
+#img{
+    width: 49%;
+}
+#color{
+    background-color: rgb(76, 114, 212);
+    height: 98px;
+}
+#foot{
+    text-align: center;
+    background-color: rgb(76, 114, 212);
+    padding-bottom: 3px;
+    padding-top: 3px;
+
+   
+}
+
+#footer{
+    margin-top: 559px;
+} 
+#copy{
+    color: rgb(255, 251, 251);
+}
