@@ -49,3 +49,109 @@ body{
 #copy{
     color: rgb(255, 251, 251);
 }
+
+#employeeForm {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  #employeeContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .employeeCard {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .employeeCard img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .employeeInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .employeeInfo h2 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  .employeeInfo p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+
+  .employee-card {
+    width: 200px;
+    height: 350px;
+    display: inline-block;
+    margin: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .employee-card img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .employee-card h4 {
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .employee-card p {
+    margin: 10px;
+    font-size: 12px;
+  }

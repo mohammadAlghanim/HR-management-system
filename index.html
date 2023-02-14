@@ -24,13 +24,37 @@
             </div>
         </header>
         <main>
-            <script src="./app.js">
-              
-            </script>
+          <form id="employeeForm">
+            <label>Full Name:</label>
+            <input type="text" name="fullName">
+            <br><br>
+            <label>Department:</label>
+            <select name="department">
+              <option value="Administration">Administration</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Development">Development</option>
+              <option value="Finance">Finance</option>
+            </select>
+            <br><br>
+            <label>Level:</label>
+            <select name="level">
+              <option value="Junior">Junior</option>
+              <option value="Mid-Senior">Mid-Senior</option>
+              <option value="Senior">Senior</option>
+            </select>
+            <br><br>
+            <label for="imageUrl">Image URL:</label>
+            <input type="text" id="imageUrl" name="imageUrl">
+            <br><br>
+            <button type="submit">Submit</button>
+          </form>
+          <section id="employeeContainer"></section>
+          
+           
         </main>
         <div id="footer">
             <footer id="foot">
-            
+              <script src="./app.js"></script>
             <div id="copy-rights">
                 <p id="copy"> ©2022. All Rights Reserved</p>
             </div>

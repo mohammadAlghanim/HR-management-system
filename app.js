@@ -1,78 +1,61 @@
 'use strict';
-function Employee(id, fullName, department, level, imageUrl, salary) {
-  this.id = id;
-  this.fullName = fullName;
-  this.department = department;
-  this.level = level;
-  this.imageUrl = imageUrl;
-  this.salary = salary;
-}
-
-// Prototype function for calculating the salary
-Employee.prototype.calculateSalary = function() {
-  let min, max;
-  switch (this.level) {
-      case 'Senior':
-          min = 1500;
-          max = 2000;
-          break;
-      case 'Mid-Senior':
-          min = 1000;
-          max = 1500;
-          break;
-      case 'Junior':
-          min = 500;
-          max = 1000;
-          break;
-      default:
-          min = 0;
-          max = 0;
-          break;
+class Employee {
+  constructor(fullName, department, level, imageUrl, id) {
+    this.fullName = fullName;
+    this.department = department;
+    this.level = level;
+    this.imageUrl = imageUrl;
+    this.id = id;
   }
-  this.salary = Math.floor(Math.random() * (max - min + 1)) + min;
-  this.netSalary = this.salary * (1 - 0.075);
+
+  // Render prototype function
+  render() {
+    const container = document.getElementById("employeeContainer");
+    
+    const card = document.createElement("div");
+    card.classList.add("employee-card");
+    container.appendChild(card);
+    
+
+    const image = document.createElement("img");
+    image.src = this.imageUrl;
+    image.alt = `src,${this.fullName}'s photo`;
+    card.appendChild(image);
+
+    const name = document.createElement("h4");
+    name.textContent = this.fullName;
+    card.appendChild(name);
+
+    const department = document.createElement("p");
+    department.textContent = `Department: ${this.department}`;
+    card.appendChild(department);
+
+    const level = document.createElement("p");
+    level.textContent = `Level: ${this.level}`;
+    card.appendChild(level);
+
+    const id = document.createElement("p");
+    id.textContent = `ID: ${this.id}`;
+    card.appendChild(id);
+  }
 }
 
+// Function for generating unique four digits employee id number
+function generateEmployeeId() {
+  return Math.floor(1000 + Math.random() * 9000);
+}
 
-Employee.prototype.render = function() {
-  /*document.write(`
-  <table border="1" id="table_width">
-    <tr>
-      <td>Name:</td>
-      <td>${this.fullName}</td>
-    </tr>
-    <tr>
-      <td>Department:</td>
-      <td>${this.department}</td>
-    </tr>
-    <tr>
-      <td>Level:</td>
-      <td>${this.level}</td>
-    </tr>
-    <tr>
-      <td>Salary:</td>
-      <td>${this.salary}</td>
-    </tr>
-    <tr>
-      <td>Image:</td>
-      <td><img src="${this.imageUrl}"/></td>
-    </tr>
-  </table>
-`);*/
-document.write(`<h5>Employee ID: ${this.id}</h5>\tFull Name: ${this.fullName}\tDepartment: ${this.department}\tLevel: ${this.level}`);
-};
-
-let employees = [
-  new Employee(1000, 'Ghazi Samer', 'Administration', 'Senior', '', 0),
-  new Employee(1001, 'Lana Ali', 'Finance', 'Senior', '', 0),
-  new Employee(1002, 'Tamara Ayoub', 'Marketing', 'Senior', '', 0),
-  new Employee(1003, 'Safi Walid', 'Administration', 'Mid-Senior', '', 0),
-  new Employee(1004, 'Omar Zaid', 'Development', 'Senior', '', 0),
-  new Employee(1005, 'Rana Saleh', 'Development', 'Junior', '', 0),
-  new Employee(1006, 'Hadi Ahmad', 'Finance', 'Mid-Senior', '', 0)
-];
-
-for (let i = 0; i < employees.length; i++) {
-  employees[i].calculateSalary();
-  employees[i].render();
+// Event listener for getting data from form
+let form = document.getElementById("employeeForm");
+form.addEventListener('submit', newHE);
+function newHE(event){
+  event.preventDefault();
+  const fullName = event.target.fullName.value;
+  const department = event.target.department.value;
+  const level = event.target.level.value;
+  const imageUrl = event.target.imageUrl.value;
+  const id = generateEmployeeId();
+  
+  const employee = new Employee(fullName, department, level,imageUrl, id);
+  employee.render();
 }
