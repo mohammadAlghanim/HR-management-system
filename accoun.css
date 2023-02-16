@@ -44,8 +44,43 @@ body{
 }
 
 #footer{
-    margin-top: 559px;
+    margin-top: 318px;
 } 
 #copy{
     color: rgb(255, 251, 251);
 }
+  /* Container styles */
+  .container {
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  /* Table styles */
+  table {
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #ddd;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Header row styles */
+  .tableHeader {
+    font-weight: bold;
+    background-color: #ccc;
+  }
+  
+  /* Total salary cell styles */
+  td:last-child {
+    font-weight: bold;
+  }
