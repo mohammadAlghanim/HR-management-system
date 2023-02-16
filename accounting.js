@@ -141,25 +141,7 @@ td1333.textContent= avgSalery(admin123);
 const td1444 = document.createElement("td");
 five.appendChild(td1444);
 td1444.textContent= sumSalery(admin123);
-/********************* ************/
-const six =document.createElement("tr");
-table.appendChild(six);
 
-const td11223 = document.createElement("td");
-six.appendChild(td11223);
-td11223.textContent= "total";
-
-const td12222 = document.createElement("td");
-six.appendChild(td12222);
-td12222.textContent=sumSalery();
-
-const td13333 = document.createElement("td");
-six.appendChild(td13333);
-td13333.textContent= "";
-
-const td14444 = document.createElement("td");
-six.appendChild(td14444);
-td14444.textContent= "";
  
 
 }
